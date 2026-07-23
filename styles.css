@@ -239,3 +239,9 @@ footer { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; padding: 56px
 
 /* hidden 속성이 항상 우선하도록 (모달·필터 숨김 처리) */
 [hidden] { display: none !important; }
+
+/* ── 반응형 줄바꿈 ──
+   class="m-br" 가 붙은 <br>은 모바일(760px 이하)에서만 적용되고
+   넓은 화면에서는 무시되어 문장이 자연스럽게 이어집니다. */
+br.m-br { display: none; }
+@media (max-width: 760px) { br.m-br { display: revert; } }
