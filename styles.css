@@ -245,3 +245,9 @@ footer { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; padding: 56px
    넓은 화면에서는 무시되어 문장이 자연스럽게 이어집니다. */
 br.m-br { display: none; }
 @media (max-width: 760px) { br.m-br { display: revert; } }
+
+/* ── PC 넓은 화면에서 히어로 소개 문장을 넓게(가능하면 한 줄로) 표시 ── */
+@media (min-width: 1121px) {
+  .hero-copy { width: min(1600px, 94%); }
+  .hero-lede { width: auto; max-width: none; }
+}
